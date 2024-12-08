@@ -10,25 +10,16 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.recyclearn.R
 
-class Dashboard : AppCompatActivity() {
-    @SuppressLint("MissingInflatedId", "WrongViewCast")
+class ListOrgActivity : AppCompatActivity() {
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_dashboard)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.dashboard)) { v, insets ->
+        setContentView(R.layout.activity_list_org)
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.listorg)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
-        }
-        // Find the button by its ID
-        val button: Button = findViewById(R.id.OrgButton) // Replace with your button ID
-
-        // Set an OnClickListener on the button
-        button.setOnClickListener {
-            // Create an Intent to start SecondActivity
-            val intent = Intent(this, ListOrgActivity::class.java)
-            startActivity(intent) // Start the new activity
         }
     }
 }
