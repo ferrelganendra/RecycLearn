@@ -11,7 +11,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.recyclearn.R
 
 class ListOrgActivity : AppCompatActivity() {
-    @SuppressLint("MissingInflatedId")
+    @SuppressLint("MissingInflatedId", "WrongViewCast")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()

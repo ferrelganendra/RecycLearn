@@ -51,11 +51,11 @@
 
                 <SearchView
                     android:id="@+id/searchView"
-                    android:layout_width="327dp"
-                    android:layout_height="41dp"
+                    android:layout_width="359dp"
+                    android:layout_height="39dp"
                     android:layout_marginTop="16dp"
-                    android:layout_marginEnd="36dp"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageButton
@@ -143,18 +143,6 @@
                     app:layout_constraintHorizontal_bias="0.498"
                     app:layout_constraintStart_toStartOf="parent"
                     tools:ignore="MissingConstraints" />
-
-                <ImageButton
-                    android:id="@+id/imageButton"
-                    android:layout_width="49dp"
-                    android:layout_height="39dp"
-                    android:layout_marginTop="16dp"
-                    android:background="@color/grey"
-                    app:layout_constraintEnd_toStartOf="@+id/searchView"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/back" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
