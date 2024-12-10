@@ -21,14 +21,26 @@ class Dashboard : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        // Find the button by its ID
-        val button: Button = findViewById(R.id.OrgButton) // Replace with your button ID
 
-        // Set an OnClickListener on the button
-        button.setOnClickListener {
-            // Create an Intent to start SecondActivity
-            val intent = Intent(this, ListOrgActivity::class.java)
-            startActivity(intent) // Start the new activity
+        // Tombol untuk membuka halaman pertama
+        val buttonPage1: Button = findViewById(R.id.OrgButton)
+        buttonPage1.setOnClickListener {
+            val intent = Intent(this, ListOrgActivity::class.java) // Ganti dengan nama Activity Anda
+            startActivity(intent)
+        }
+
+        // Tombol untuk membuka halaman kedua
+        val buttonPage2: Button = findViewById(R.id.AnorgButton)
+        buttonPage2.setOnClickListener {
+            val intent = Intent(this, ListAnorgActivity::class.java) // Ganti dengan nama Activity Anda
+            startActivity(intent)
+        }
+
+        // Tombol untuk membuka halaman ketiga
+        val buttonPage3: Button = findViewById(R.id.B3button)
+        buttonPage3.setOnClickListener {
+            val intent = Intent(this, ListB3Activity::class.java) // Ganti dengan nama Activity Anda
+            startActivity(intent)
         }
     }
 }

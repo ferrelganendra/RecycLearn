@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     tools:context=".Activity.MainActivity"
-    android:background="@color/white"
     android:id="@+id/listorg"
     android:layout_margin="8dp"
     android:layout_height="wrap_content">
@@ -39,8 +38,11 @@
             android:id="@+id/textView4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="76dp"
+            android:layout_marginBottom="36dp"
+            android:background="@color/grey"
             android:text="FUFUFAFAFA"
+            android:textColor="@color/white"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
@@ -49,16 +51,17 @@
 
         <SearchView
             android:id="@+id/searchView"
-            android:layout_width="426dp"
-            android:layout_height="57dp"
+            android:layout_width="327dp"
+            android:layout_height="41dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="36dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageButton
             android:id="@+id/imageButton8"
-            android:layout_width="424dp"
-            android:layout_height="163dp"
+            android:layout_width="431dp"
+            android:layout_height="172dp"
             android:layout_marginTop="56dp"
             android:scaleType="centerInside"
             app:layout_constraintBottom_toTopOf="@+id/textView16"
@@ -66,19 +69,22 @@
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/searchView"
-            app:layout_constraintVertical_bias="1.0"
+            app:layout_constraintVertical_bias="0.896"
             tools:ignore="MissingConstraints"
             tools:srcCompat="@drawable/recyc" />
 
         <TextView
             android:id="@+id/textView16"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
+            android:layout_width="433dp"
+            android:layout_height="22dp"
+            android:layout_marginBottom="24dp"
+            android:background="@color/grey"
             android:text="FUFUFAFAFA"
+            android:textColor="@color/white"
+            android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/imageButton7"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintHorizontal_bias="0.045"
             app:layout_constraintStart_toStartOf="parent"
             tools:ignore="MissingConstraints" />
 
@@ -100,7 +106,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
+            android:background="@color/grey"
             android:text="FUFUFAFAFA"
+            android:textColor="@color/white"
+            android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/imageButton6"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
@@ -125,12 +134,27 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
+            android:background="@color/grey"
             android:text="FUFUFAFAFA"
+            android:textColor="@color/white"
+            android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/imageButton3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             tools:ignore="MissingConstraints" />
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="49dp"
+            android:layout_height="41dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/grey"
+            app:layout_constraintEnd_toStartOf="@+id/searchView"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/back" />
 
 
       </androidx.constraintlayout.widget.ConstraintLayout>
