@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">RecycLearn</string>
+    <string name="button_art_description">Artikel</string>
 </resources>

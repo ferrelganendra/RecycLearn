@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.example.recyclearn"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.recyclearn"
@@ -36,6 +36,9 @@ android {
 }
 
 dependencies {
+    implementation ("androidx.core:core-ktx:1.10.1")
+    implementation ("androidx.appcompat:appcompat:1.6.1")
+    implementation ("com.google.android.material:material:1.9.0")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
