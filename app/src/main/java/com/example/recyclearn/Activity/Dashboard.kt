@@ -9,8 +9,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.recyclearn.R
+import com.google.firebase.firestore.FirebaseFirestore
 
 class Dashboard : AppCompatActivity() {
+    var db: FirebaseFirestore = FirebaseFirestore.getInstance()
     @SuppressLint("MissingInflatedId", "WrongViewCast")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

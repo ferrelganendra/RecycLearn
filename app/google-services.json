@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "627151457039",
+    "project_id": "recyclearn-fufufafa",
+    "storage_bucket": "recyclearn-fufufafa.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:627151457039:android:b814043fa599d91b448c7a",
+        "android_client_info": {
+          "package_name": "com.example.recyclearn"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8YHmL0K8YZ1eBg9-S8sfnWJWEuOKR3PE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
