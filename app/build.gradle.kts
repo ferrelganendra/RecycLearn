@@ -2,8 +2,9 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     id("com.google.gms.google-services")
-
+    id("kotlin-kapt")
 }
+
 
 android {
     namespace = "com.example.recyclearn"
@@ -41,13 +42,16 @@ dependencies {
     implementation ("androidx.core:core-ktx:1.10.1")
     implementation ("androidx.appcompat:appcompat:1.6.1")
     implementation ("com.google.android.material:material:1.9.0")
-    implementation(platform("com.google.firebase:firebase-bom:33.7.0"))
-    implementation(platform("com.google.firebase:firebase-bom:33.7.0"))
+    implementation (platform("com.google.firebase:firebase-bom:33.7.0"))
+    implementation ("com.google.firebase:firebase-firestore:24.9.0")
     implementation("com.google.firebase:firebase-analytics")
     implementation("com.google.firebase:firebase-auth")
     implementation("com.google.firebase:firebase-firestore")
     implementation("com.google.firebase:firebase-database")
-
+    implementation ("com.github.bumptech.glide:glide:4.16.0")
+    annotationProcessor ("com.github.bumptech.glide:compiler:4.14.2")
+    kapt ("com.github.bumptech.glide:compiler:4.14.2")
+    
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)

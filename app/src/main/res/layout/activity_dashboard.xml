@@ -316,51 +316,63 @@
 
                         <LinearLayout
                             android:layout_width="wrap_content"
-                            android:layout_height="190dp"
+                            android:layout_height="wrap_content"
                             android:orientation="horizontal"
                             android:padding="8dp">
 
                             <!-- Link 1 -->
 
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/recyclerView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="8dp"
+                                android:clipToPadding="false"
+                                android:scrollbars="horizontal"/>
+
                             <!-- Spacer -->
-                            <ImageButton
-                                android:id="@+id/art1"
-                                android:layout_width="161dp"
-                                android:layout_height="161dp"
-                                android:layout_weight="1"
-                                android:scaleType="centerInside"
-                                android:visibility="visible"
-                                tools:srcCompat="@drawable/recycle_planet_earth_cartoon_character_png___svg_design_for_t_shirts"
-                                android:contentDescription="@string/button_art_description"/>
-                            <View
-                                android:layout_width="16dp"
-                                android:layout_height="wrap_content" />
+<!--                            <ImageButton-->
+<!--                                android:id="@+id/art1"-->
+<!--                                android:layout_width="161dp"-->
+<!--                                android:layout_height="161dp"-->
+<!--                                android:layout_weight="1"-->
+<!--                                android:contentDescription="@string/button_art_description"-->
+<!--                                android:scaleType="centerInside"-->
+<!--                                android:visibility="visible"-->
+<!--                                tools:srcCompat="@drawable/recycle_planet_earth_cartoon_character_png___svg_design_for_t_shirts"-->
+<!--                                tools:visibility="visible" />-->
+<!--                            <View-->
+<!--                                android:layout_width="16dp"-->
+<!--                                android:layout_height="wrap_content" />-->
 
                             <!-- Link 2 -->
 
                             <!-- Spacer -->
-                            <ImageButton
-                                android:id="@+id/art2"
-                                android:layout_width="161dp"
-                                android:layout_height="161dp"
-                                android:layout_weight="1"
-                                android:scaleType="centerInside"
-                                tools:srcCompat="@drawable/recycle_planet_earth_cartoon_character_png___svg_design_for_t_shirts"
-                                android:contentDescription="@string/button_art_description"/>
+<!--                            <ImageButton-->
+<!--                                android:id="@+id/art2"-->
+<!--                                android:layout_width="161dp"-->
+<!--                                android:layout_height="161dp"-->
+<!--                                android:layout_weight="1"-->
+<!--                                android:contentDescription="@string/button_art_description"-->
+<!--                                android:scaleType="centerInside"-->
+<!--                                android:visibility="visible"-->
+<!--                                tools:srcCompat="@drawable/recycle_planet_earth_cartoon_character_png___svg_design_for_t_shirts"-->
+<!--                                tools:visibility="visible" />-->
 
-                            <View
-                                android:layout_width="16dp"
-                                android:layout_height="wrap_content" />
+<!--                            <View-->
+<!--                                android:layout_width="16dp"-->
+<!--                                android:layout_height="wrap_content" />-->
 
                             <!-- Link 3 -->
-                            <ImageButton
-                                android:id="@+id/art3"
-                                android:layout_width="161dp"
-                                android:layout_height="161dp"
-                                android:layout_weight="1"
-                                android:scaleType="centerInside"
-                                tools:srcCompat="@drawable/recycle_planet_earth_cartoon_character_png___svg_design_for_t_shirts"
-                                android:contentDescription="@string/button_art_description"/>
+<!--                            <ImageButton-->
+<!--                                android:id="@+id/art3"-->
+<!--                                android:layout_width="161dp"-->
+<!--                                android:layout_height="161dp"-->
+<!--                                android:layout_weight="1"-->
+<!--                                android:scaleType="centerInside"-->
+<!--                                tools:srcCompat="@drawable/recycle_planet_earth_cartoon_character_png___svg_design_for_t_shirts"-->
+<!--                                android:contentDescription="@string/button_art_description"/>-->
 
                         </LinearLayout>
                     </HorizontalScrollView>

@@ -18,7 +18,7 @@ class VideoActivity : AppCompatActivity() {
         setContentView(R.layout.activity_video)
 
         val webView: WebView = findViewById(R.id.webView);
-        val video: String = "<iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/PdOJZakneXc?si=_ee1fB1jgIha_Mxs\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>";
+        val video: String = "<iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/watch?v=bGc5lGxzMQw\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>";
 
         webView.loadData(video, "text/html", "UTF-8");
         webView.getSettings().setJavaScriptEnabled(true);
