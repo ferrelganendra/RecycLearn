@@ -19,7 +19,7 @@
         android:layout_marginBottom="16dp">
 
         <EditText
-            android:id="@+id/etRegisterUsername"
+            android:id="@+id/nameEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Username"
@@ -32,7 +32,7 @@
         android:layout_marginBottom="16dp">
 
         <EditText
-            android:id="@+id/etRegisterEmail"
+            android:id="@+id/emailEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Email"
@@ -45,7 +45,7 @@
         android:layout_marginBottom="16dp">
 
         <EditText
-            android:id="@+id/etRegisterPassword"
+            android:id="@+id/passwordEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Password"
@@ -53,8 +53,14 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/btnRegister"
+        android:id="@+id/registerButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Register"/>
+
+    <Button
+        android:id="@+id/logregButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login"/>
 </LinearLayout>

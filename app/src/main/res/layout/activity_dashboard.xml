@@ -447,11 +447,9 @@
             android:layout_height="match_parent"
             android:layout_gravity="bottom"
             app:backgroundTint="@color/white"
-
             app:fabCradleMargin="8dp"
             app:fabCradleRoundedCornerRadius="50dp"
             app:fabCradleVerticalOffset="6dp">
-
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -464,13 +462,15 @@
                     android:layout_weight="0.25"
                     android:orientation="vertical">
 
-                    <ImageView
+                    <ImageButton
                         android:id="@+id/homebut"
                         android:layout_width="20dp"
                         android:layout_height="20dp"
                         android:layout_gravity="center"
                         android:layout_marginTop="8dp"
-                        app:srcCompat="@drawable/bottom_btn1" />
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="Home"
+                        android:src="@drawable/bottom_btn1" />
 
                     <TextView
                         android:id="@+id/homebuttxt"
@@ -486,13 +486,15 @@
                     android:layout_weight="0.25"
                     android:orientation="vertical">
 
-                    <ImageView
+                    <ImageButton
                         android:id="@+id/Course"
                         android:layout_width="20dp"
                         android:layout_height="20dp"
                         android:layout_gravity="center"
                         android:layout_marginTop="8dp"
-                        app:srcCompat="@drawable/course2" />
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="Course"
+                        android:src="@drawable/course2" />
 
                     <TextView
                         android:id="@+id/coursetext"
@@ -502,8 +504,6 @@
                         android:textAlignment="center" />
                 </LinearLayout>
 
-
-
                 <LinearLayout
                     android:id="@+id/profileBtn"
                     android:layout_width="0dp"
@@ -511,13 +511,15 @@
                     android:layout_weight="0.25"
                     android:orientation="vertical">
 
-                    <ImageView
+                    <ImageButton
                         android:id="@+id/profile"
                         android:layout_width="20dp"
                         android:layout_height="20dp"
                         android:layout_gravity="center"
                         android:layout_marginTop="8dp"
-                        app:srcCompat="@drawable/bottom_btn3" />
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="Profile"
+                        android:src="@drawable/bottom_btn3" />
 
                     <TextView
                         android:id="@+id/proftext"

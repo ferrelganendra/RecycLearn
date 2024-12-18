@@ -5,6 +5,8 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
+import android.widget.ImageButton
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -14,9 +16,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.recyclearn.Artikel.HorizontalAdapter
 import com.example.recyclearn.Artikel.Model
 import com.example.recyclearn.R
-import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.FirebaseFirestore
-
 
 class Dashboard : AppCompatActivity() {
     private lateinit var recyclerView: RecyclerView
@@ -30,7 +30,7 @@ class Dashboard : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_dashboard)
 
-        // Inisialisasi Firebase
+        // Initialize Firebase
         db = FirebaseFirestore.getInstance()
 
         // Setup RecyclerView
@@ -38,6 +38,9 @@ class Dashboard : AppCompatActivity() {
 
         // Setup Button Listeners
         setupButtonListeners()
+
+        // Setup Bottom Navigation Listeners
+        setupBottomNavigation()
 
         // Fetch Artikel Data
         fetchDataArtikelFromFirestore()
@@ -69,16 +72,36 @@ class Dashboard : AppCompatActivity() {
         }
     }
 
+    private fun setupBottomNavigation() {
+        // Home button (current dashboard)
+        findViewById<ImageButton>(R.id.homebut).setOnClickListener {
+            // We're already in Dashboard, so no need to navigate
+            Toast.makeText(this, "You are already on the Home page", Toast.LENGTH_SHORT).show()
+        }
+
+        // Course button
+        findViewById<ImageButton>(R.id.Course).setOnClickListener {
+            val intent = Intent(this, ListOrgActivity::class.java)
+            startActivity(intent)
+        }
+
+        // Profile button
+        findViewById<ImageButton>(R.id.profile).setOnClickListener {
+            val intent = Intent(this, ProfileActivity::class.java)
+            startActivity(intent)
+        }
+    }
+
     private fun fetchDataArtikelFromFirestore() {
         db.collection("Artikel")
             .get()
             .addOnSuccessListener { result ->
-                itemList.clear() // Bersihkan list sebelum menambah data baru
+                itemList.clear() // Clear list before adding new data
                 for (document in result) {
                     val title = document.getString("judul") ?: "No Title"
                     val image = document.getString("gambar") ?: ""
 
-                    // Log untuk debugging
+                    // Log for debugging
                     Log.d("Dashboard", "Artikel: $title, Image: $image")
 
                     itemList.add(Model(image))
@@ -90,4 +113,3 @@ class Dashboard : AppCompatActivity() {
             }
     }
 }
-

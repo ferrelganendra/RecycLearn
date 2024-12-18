@@ -56,6 +56,11 @@ dependencies {
     implementation ("androidx.recyclerview:recyclerview:1.2.1")
     implementation ("com.pierfrancescosoffritti.androidyoutubeplayer:core:12.0.0")
 
+    implementation("com.google.android.gms:play-services-auth:21.3.0")
+
+    // Coroutines for async operations
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.6.4")
+
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
