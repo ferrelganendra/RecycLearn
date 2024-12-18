@@ -6,7 +6,6 @@
     <!-- Add these internet permissions -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 
     <application
@@ -32,6 +31,12 @@
             android:exported="false" />
         <activity
             android:name=".Activity.ListOrgActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Activity.VideoListActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Activity.VideoPlayerActivity"
             android:exported="true" />
         <activity
             android:name=".Activity.Dashboard"

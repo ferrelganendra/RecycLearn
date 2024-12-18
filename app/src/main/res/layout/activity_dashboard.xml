@@ -31,31 +31,26 @@
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <ImageView
-                        android:id="@+id/imageView9"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="25dp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:srcCompat="@drawable/notification"
-                        tools:layout_editor_absoluteY="21dp"
-                        tools:ignore="MissingConstraints" />
+                    android:layout_height="108dp">
 
                     <ImageView
                         android:id="@+id/imageView13"
                         android:layout_width="250dp"
                         android:layout_height="50dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.496"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0"
                         app:srcCompat="@drawable/recy_solutions__crop"
-                        tools:layout_editor_absoluteX="80dp"
-                        tools:layout_editor_absoluteY="21dp" />
+                        tools:ignore="MissingConstraints" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <TextView
                     android:id="@+id/textView8"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
                     android:layout_marginTop="32dp"
@@ -492,39 +487,22 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/wallet"
+                        android:id="@+id/Course"
                         android:layout_width="20dp"
                         android:layout_height="20dp"
                         android:layout_gravity="center"
                         android:layout_marginTop="8dp"
-                        app:srcCompat="@drawable/bottom_btn2" />
+                        app:srcCompat="@drawable/course2" />
 
                     <TextView
-                        android:id="@+id/wallettext"
+                        android:id="@+id/coursetext"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Wallet"
+                        android:text="Course"
                         android:textAlignment="center" />
                 </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.25"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:visibility="visible">
 
-                    <com.google.android.material.floatingactionbutton.FloatingActionButton
-                        android:id="@+id/trans"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/map"
-                        app:backgroundTint="#32357A"
-                        app:maxImageSize="30dp"
-                        app:tint="@color/white" />
-
-                </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/profileBtn"
@@ -548,30 +526,8 @@
                         android:text="Profile"
                         android:textAlignment="center" />
                 </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.25"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/imageView12"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="8dp"
-                        app:srcCompat="@drawable/bottom_btn4" />
-
-                    <TextView
-                        android:id="@+id/textView12"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Settings"
-                        android:textAlignment="center" />
-                </LinearLayout>
             </LinearLayout>
         </com.google.android.material.bottomappbar.BottomAppBar>
-
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

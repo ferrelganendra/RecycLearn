@@ -1,8 +1,8 @@
 package com.example.recyclearn.Activity
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -11,18 +11,17 @@ import com.example.recyclearn.R
 import com.example.recyclearn.data.VideoModel
 import com.google.firebase.firestore.FirebaseFirestore
 
-class ListB3Activity : AppCompatActivity() {
+class VideoListActivity : AppCompatActivity() {
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var videoAdapter: VideoAdapter
     private val videoList = mutableListOf<VideoModel>()
 
-    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_list_b3)
+        setContentView(R.layout.activity_video_list)
 
-        recyclerView = findViewById(R.id.recyclerViewB3)
+        recyclerView = findViewById(R.id.recyclerViewVideos)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
         videoAdapter = VideoAdapter(videoList) { video ->
@@ -36,11 +35,12 @@ class ListB3Activity : AppCompatActivity() {
 
     private fun fetchVideosFromFirestore() {
         val firestore = FirebaseFirestore.getInstance()
-        firestore.collection("B3")
+        firestore.collection("Organik")
             .get()
             .addOnSuccessListener { querySnapshot ->
                 videoList.clear()
                 for (document in querySnapshot.documents) {
+                    // Create VideoModel with description
                     val video = VideoModel(
                         documentId = document.id,
                         title = document.getString("title") ?: "Untitled Video",
@@ -52,10 +52,6 @@ class ListB3Activity : AppCompatActivity() {
                 }
 
                 videoAdapter.notifyDataSetChanged()
-
-                if (videoList.isEmpty()) {
-                    Toast.makeText(this, "No B3 videos found", Toast.LENGTH_SHORT).show()
-                }
             }
             .addOnFailureListener { exception ->
                 Toast.makeText(this, "Failed to load videos: ${exception.message}", Toast.LENGTH_SHORT).show()
