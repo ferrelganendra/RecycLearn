@@ -42,7 +42,7 @@
                         app:layout_constraintHorizontal_bias="0.496"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="1.0"
+                        app:layout_constraintVertical_bias="0.7"
                         app:srcCompat="@drawable/recy_solutions__crop"
                         tools:ignore="MissingConstraints" />
 
@@ -52,8 +52,8 @@
                     android:id="@+id/textView8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="32dp"
-                    android:layout_marginTop="32dp"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="0dp"
                     android:text="Selamat datang! Bersama untuk bumi lebih hijau."
                     android:textColor="@color/white"
                     android:textSize="14sp"
@@ -67,7 +67,7 @@
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="32dp"
                     android:layout_marginBottom="16dp"
-                    android:background="#818C13"
+                    android:background="#379777"
                     android:drawableStart="@drawable/search"
                     android:drawableEnd="@drawable/microphone"
                     android:drawablePadding="16dp"
@@ -87,11 +87,12 @@
                     android:id="@+id/imageView10"
                     android:layout_width="0dp"
                     android:layout_height="100dp"
+                    android:background="#355F2E"
                     android:scaleType="fitXY"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/arc_2" />
+                    app:srcCompat="@android:drawable/dialog_frame" />
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -139,7 +140,7 @@
                             <androidx.constraintlayout.widget.ConstraintLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:background="@color/green2">
+                                android:background="#379777">
 
                                 <Button
                                     android:id="@+id/OrgButton"
@@ -147,7 +148,7 @@
                                     android:layout_height="wrap_content"
                                     android:background="@drawable/category_butt"
                                     android:text="Organik"
-                                    android:textColor="#000000"
+                                    android:textColor="#ffffff"
                                     android:textSize="10dp"
                                     android:textStyle="bold"
                                     app:layout_constraintBottom_toBottomOf="parent"
@@ -191,7 +192,7 @@
                             <androidx.constraintlayout.widget.ConstraintLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:background="@color/green2">
+                                android:background="#379777">
 
                                 <Button
                                     android:id="@+id/AnorgButton"
@@ -199,7 +200,7 @@
                                     android:layout_height="wrap_content"
                                     android:background="@drawable/category_butt"
                                     android:text="Non Organik"
-                                    android:textColor="#000000"
+                                    android:textColor="#ffffff"
                                     android:textSize="10dp"
                                     android:textStyle="bold"
                                     app:layout_constraintBottom_toBottomOf="parent"
@@ -243,7 +244,7 @@
                             <androidx.constraintlayout.widget.ConstraintLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:background="@color/green2">
+                                android:background="#379777">
 
                                 <Button
                                     android:id="@+id/B3button"
@@ -251,7 +252,7 @@
                                     android:layout_height="wrap_content"
                                     android:background="@drawable/category_butt"
                                     android:text="Bahan Berbahaya dan Beracun (B3)"
-                                    android:textColor="#000000"
+                                    android:textColor="#ffffff"
                                     android:textSize="8dp"
                                     android:textStyle="bold"
                                     app:layout_constraintBottom_toBottomOf="parent"
