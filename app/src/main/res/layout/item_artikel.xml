@@ -1,16 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="8dp">
+    android:gravity="center"
+    android:layout_marginEnd="16dp">
 
-    <ImageView
+    <!--    <ImageView-->
+    <!--        android:id="@+id/itemImage"-->
+    <!--        android:layout_width="161dp"-->
+    <!--        android:layout_height="161dp"-->
+    <!--        android:scaleType="centerCrop"-->
+    <!--        tools:src="@drawable/profile"/>-->
+
+    <ImageButton
         android:id="@+id/itemImage"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/recycle_planet_earth_cartoon_character_png___svg_design_for_t_shirts" />
+        android:layout_width="161dp"
+        android:layout_height="161dp"
+        android:contentDescription="Artikel Image"
+        android:scaleType="fitXY"
+        android:src="@drawable/profile">
+
+    </ImageButton>
+
+    <TextView
+        android:id="@+id/itemTitle"
+        android:layout_width="161dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textAlignment="center"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:textSize="12sp"
+        tools:text="Article Title Goes Here"/>
 
 </LinearLayout>
