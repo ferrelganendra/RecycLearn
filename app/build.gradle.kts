@@ -48,10 +48,20 @@ dependencies {
     implementation("com.google.firebase:firebase-auth")
     implementation("com.google.firebase:firebase-firestore")
     implementation("com.google.firebase:firebase-database")
-    implementation ("com.github.bumptech.glide:glide:4.16.0")
+//    implementation ("com.github.bumptech.glide:glide:4.16.0")
+    implementation ("com.github.bumptech.glide:glide:4.12.0")
+    implementation(libs.firebase.storage.ktx)
     annotationProcessor ("com.github.bumptech.glide:compiler:4.14.2")
     kapt ("com.github.bumptech.glide:compiler:4.14.2")
-    
+    implementation ("androidx.recyclerview:recyclerview:1.2.1")
+    implementation ("com.pierfrancescosoffritti.androidyoutubeplayer:core:12.0.0")
+
+    implementation("com.google.android.gms:play-services-auth:21.3.0")
+
+    // Coroutines for async operations
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.6.4")
+
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
