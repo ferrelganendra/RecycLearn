@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.recyclearn">
-
     <!-- Add these internet permissions -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -18,8 +17,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RecycLearn"
         tools:targetApi="31">
-
-        <!-- Your existing activities remain the same -->
+        <activity
+            android:name=".Activity.DetailArticle"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.ListArticle"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.HomeActivity"
+            android:exported="false" /> <!-- Your existing activities remain the same -->
         <activity
             android:name=".Activity.VideoActivity"
             android:exported="false" />
@@ -59,6 +65,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <receiver android:name=".Notification.NotificationReceiver" />
     </application>
 

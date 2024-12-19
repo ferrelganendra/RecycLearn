@@ -1,7 +1,6 @@
 package com.example.recyclearn.Artikel
 
 import android.content.Intent
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,8 +11,8 @@ import com.bumptech.glide.Glide
 import com.example.recyclearn.Activity.DetailArticle
 import com.example.recyclearn.R
 
-class HorizontalAdapter(private val itemList: List<Model>) :
-    RecyclerView.Adapter<HorizontalAdapter.ViewHolder>() {
+class VerticalAdapter(private val itemList: List<Model>) :
+    RecyclerView.Adapter<VerticalAdapter.ViewHolder>() {
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val itemImage: ImageView = view.findViewById(R.id.itemImage)
@@ -23,7 +22,7 @@ class HorizontalAdapter(private val itemList: List<Model>) :
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.item_artikel, parent, false)
+            .inflate(R.layout.item_artikel_vertical, parent, false)
         return ViewHolder(view)
     }
 
@@ -33,7 +32,6 @@ class HorizontalAdapter(private val itemList: List<Model>) :
         holder.itemDesc.text = item.deskripsi
         Glide.with(holder.itemView.context).load(item.image).into(holder.itemImage)
 
-        Log.d("Fiqri log nya", holder.itemDesc.text.toString())
         // Tambahkan klik listener
         holder.itemView.setOnClickListener {
             val context = holder.itemView.context

@@ -12,4 +12,5 @@
     <color name="grey">#8d8d8d</color>
     <color name="active_color">#32357A</color>
     <color name="inactive_color">#888888</color>
+    <color name="primary">#355F2E</color>
 </resources>

@@ -53,7 +53,7 @@ class LoginActivity : AppCompatActivity() {
             try {
                 auth.signInWithEmailAndPassword(email, password).await()
                 Toast.makeText(this@LoginActivity, "Login Successful", Toast.LENGTH_SHORT).show()
-                startActivity(Intent(this@LoginActivity, MainActivity::class.java))
+                startActivity(Intent(this@LoginActivity, HomeActivity::class.java))
                 finish()
             } catch (e: Exception) {
                 Toast.makeText(this@LoginActivity, "Login Failed: ${e.message}", Toast.LENGTH_SHORT).show()

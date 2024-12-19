@@ -2,22 +2,25 @@
 <androidx.cardview.widget.CardView
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:elevation="4dp"
     app:cardCornerRadius="10dp"
-    android:layout_marginEnd="10dp"
+    android:layout_marginBottom="10dp"
+    android:layout_marginEnd="15dp"
+    android:layout_marginStart="15dp"
+    android:layout_marginTop="15dp"
     android:orientation="vertical">
     <LinearLayout
         android:background="@color/dark_blue"
         android:paddingBottom="30dp"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
         <ImageView
             android:id="@+id/itemImage"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
             android:scaleType="centerCrop"
             android:src="@drawable/recycle_planet_earth_cartoon_character_png___svg_design_for_t_shirts" />
         <TextView
@@ -26,6 +29,7 @@
             android:textAlignment="center"
             android:textSize="16sp"
             android:textStyle="bold"
+            android:maxLines="1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Judul"/>
