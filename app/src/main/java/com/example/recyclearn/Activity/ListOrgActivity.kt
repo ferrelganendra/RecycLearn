@@ -73,12 +73,9 @@ class ListOrgActivity : AppCompatActivity() {
 
     private fun openVideoPlayer(video: VideoModel) {
         val intent = Intent(this, VideoPlayerActivity::class.java).apply {
-            putExtra("VIDEO_ID", video.videoUrl)
-            putExtra("VIDEO_TITLE", "Sample Video")
-            putExtra("VIDEO_DESCRIPTION", "This is a sample description.")
-    //            putExtra("VIDEO_URL", video.videoUrl)
-    //            putExtra("VIDEO_TITLE", video.title)
-    //            putExtra("VIDEO_DESCRIPTION", video.description)
+                putExtra("VIDEO_URL", video.videoUrl)
+                putExtra("VIDEO_TITLE", video.title)
+                putExtra("VIDEO_DESCRIPTION", video.description)
         }
         startActivity(intent)
     }

@@ -37,7 +37,7 @@ class VideoPlayerActivity : AppCompatActivity() {
         lifecycle.addObserver(youtubePlayerView)
         youtubePlayerView.addYouTubePlayerListener(object : AbstractYouTubePlayerListener() {
             override fun onReady(youTubePlayer: YouTubePlayer) {
-                val videoId = intent.getStringExtra("VIDEO_ID") ?: "SRXH9AbT280" // Default video ID
+                val videoId = intent.getStringExtra("VIDEO_URL") ?: "W0Zolvz1Z3A" // Default video ID
                 youTubePlayer.loadVideo(videoId, 0f)
             }
         })
