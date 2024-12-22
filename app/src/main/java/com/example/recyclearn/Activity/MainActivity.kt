@@ -53,7 +53,7 @@ class MainActivity : AppCompatActivity() {
             val currentUser = auth.currentUser
             if (currentUser != null) {
                 // User is signed in, go to Dashboard
-                val intent = Intent(this, Dashboard::class.java)
+                val intent = Intent(this, HomeActivity::class.java)
                 startActivity(intent)
             } else {
                 // No user signed in, go to Login

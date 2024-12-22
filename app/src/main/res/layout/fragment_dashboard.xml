@@ -400,17 +400,16 @@
 
                         <HorizontalScrollView
                             android:layout_width="wrap_content"
-
                             android:layout_height="297dp"
                             android:background="#F5F5F5"
                             android:padding="16dp">
-
 
                             <androidx.recyclerview.widget.RecyclerView
                                 android:id="@+id/recyclerViewTrashPlaces"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:clipToPadding="false"
+                                android:scrollbars="none"
                                 android:orientation="horizontal" />
                         </HorizontalScrollView>
                     </LinearLayout>
@@ -419,123 +418,4 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
     </ScrollView>
-
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
-        android:layout_width="match_parent"
-        android:layout_height="72dp"
-        app:layout_constraintBottom_toBottomOf="@+id/scrollView2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <com.google.android.material.bottomappbar.BottomAppBar
-            android:id="@+id/app_bar"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="bottom"
-            app:backgroundTint="@color/white"
-            app:fabCradleMargin="8dp"
-            app:fabCradleRoundedCornerRadius="50dp"
-            app:fabCradleVerticalOffset="6dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <!-- Home Button -->
-                <LinearLayout
-                    android:id="@+id/homeButtonLayout"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.25"
-                    android:orientation="vertical"
-                    android:background="?attr/selectableItemBackground"
-                    android:clickable="true"
-                    android:focusable="true">
-
-                    <ImageButton
-                        android:id="@+id/homebut"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="8dp"
-                        android:background="@null"
-                        android:contentDescription="Home"
-                        android:src="@drawable/bottom_btn1" />
-
-                    <TextView
-                        android:id="@+id/homebuttxt"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Home"
-                        android:textStyle="bold"
-                        android:textColor="#526E48"
-                        android:textAlignment="center" />
-                </LinearLayout>
-
-                <!-- Course Button -->
-                <LinearLayout
-                    android:id="@+id/courseButtonLayout"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.25"
-                    android:orientation="vertical"
-                    android:background="?attr/selectableItemBackground"
-                    android:clickable="true"
-                    android:focusable="true">
-
-                    <ImageButton
-                        android:id="@+id/Course"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="8dp"
-                        android:background="@null"
-                        android:contentDescription="Course"
-                        android:src="@drawable/course2" />
-
-                    <TextView
-                        android:id="@+id/coursetext"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Course"
-                        android:textStyle="bold"
-                        android:textColor="#526E48"
-                        android:textAlignment="center" />
-                </LinearLayout>
-
-                <!-- Profile Button -->
-                <LinearLayout
-                    android:id="@+id/profileButtonLayout"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.25"
-                    android:orientation="vertical"
-                    android:background="?attr/selectableItemBackground"
-                    android:clickable="true"
-                    android:focusable="true">
-
-                    <ImageButton
-                        android:id="@+id/profile"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="8dp"
-                        android:background="@null"
-                        android:contentDescription="Profile"
-                        android:src="@drawable/bottom_btn3" />
-
-                    <TextView
-                        android:id="@+id/proftext"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Profile"
-                        android:textStyle="bold"
-                        android:textColor="#526E48"
-                        android:textAlignment="center" />
-                </LinearLayout>
-            </LinearLayout>
-        </com.google.android.material.bottomappbar.BottomAppBar>
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

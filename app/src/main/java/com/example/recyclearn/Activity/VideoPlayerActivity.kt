@@ -8,6 +8,9 @@ import android.widget.TextView
 import android.widget.VideoView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.recyclearn.R
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
 
 class VideoPlayerActivity : AppCompatActivity() {
 
@@ -35,13 +38,22 @@ class VideoPlayerActivity : AppCompatActivity() {
         descriptionTextView.text = videoDescription ?: "No description available"
 
         // Play video
-        videoUrl?.let { url ->
-            val mediaController = MediaController(this)
-            mediaController.setAnchorView(videoView)
-            videoView.setMediaController(mediaController)
-            videoView.setVideoURI(Uri.parse(url))
-            videoView.requestFocus()
-            videoView.start()
-        }
+//        videoUrl?.let { url ->
+//            val mediaController = MediaController(this)
+//            mediaController.setAnchorView(videoView)
+//            videoView.setMediaController(mediaController)
+//            videoView.setVideoURI(Uri.parse(url))
+//            videoView.requestFocus()
+//            videoView.start()
+//        }
+        val youtubePlayerView: YouTubePlayerView = findViewById(R.id.videoViewPlayer)
+        lifecycle.addObserver(youtubePlayerView)
+
+        youtubePlayerView.addYouTubePlayerListener(object : AbstractYouTubePlayerListener() {
+            override fun onReady(youTubePlayer: YouTubePlayer) {
+                val videoId = "SRXH9AbT280" // Ganti dengan ID video YouTube yang ingin diputar
+                youTubePlayer.loadVideo(videoId, 0f)
+            }
+          })
     }
 }

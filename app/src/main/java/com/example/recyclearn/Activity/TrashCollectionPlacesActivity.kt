@@ -2,6 +2,7 @@ package com.example.recyclearn.Activity
 
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.recyclearn.Adapter.TrashCollectionPlacesAdapter
@@ -15,7 +16,7 @@ class TrashCollectionPlacesActivity : AppCompatActivity() {
 
     companion object {
         fun setupTrashCollectionPlaces(
-            activity: AppCompatActivity,
+            activity: FragmentActivity,
             recyclerView: RecyclerView
         ) {
             val places = mutableListOf<TrashCollectionPlace>()

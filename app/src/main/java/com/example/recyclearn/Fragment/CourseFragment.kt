@@ -1,41 +1,37 @@
-package com.example.recyclearn.Activity
+package com.example.recyclearn.Fragment
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
+import android.util.Log
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.recyclearn.Activity.VideoAdapter
+import com.example.recyclearn.Activity.VideoPlayerActivity
 import com.example.recyclearn.R
 import com.example.recyclearn.data.VideoModel
 import com.google.firebase.firestore.FirebaseFirestore
 
-class ListB3Activity : AppCompatActivity() {
+class CourseFragment : Fragment() {
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var videoAdapter: VideoAdapter
     private val videoList = mutableListOf<VideoModel>()
 
-    @SuppressLint("MissingInflatedId")
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_list_b3)
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        val view = inflater.inflate(R.layout.fragment_course, container, false)
 
 
-        // Setup Toolbar with Back Button
-        val toolbar: Toolbar = findViewById(R.id.toolbar)
-        setSupportActionBar(toolbar)
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.setDisplayShowHomeEnabled(true)
-
-        toolbar.setNavigationOnClickListener {
-            onBackPressed()
-        }
-
-        recyclerView = findViewById(R.id.recyclerViewB3)
-        recyclerView.layoutManager = LinearLayoutManager(this)
+        recyclerView = view.findViewById(R.id.recyclerViewOrg)
+        recyclerView.layoutManager = LinearLayoutManager(requireContext())
 
         videoAdapter = VideoAdapter(videoList) { video ->
             // Open video when item is clicked
@@ -44,11 +40,13 @@ class ListB3Activity : AppCompatActivity() {
         recyclerView.adapter = videoAdapter
 
         fetchVideosFromFirestore()
+
+        return view
     }
 
     private fun fetchVideosFromFirestore() {
         val firestore = FirebaseFirestore.getInstance()
-        firestore.collection("B3")
+        firestore.collection("Organik")
             .get()
             .addOnSuccessListener { querySnapshot ->
                 videoList.clear()
@@ -60,22 +58,23 @@ class ListB3Activity : AppCompatActivity() {
                         videoUrl = document.getString("videoUrl") ?: "",
                         description = document.getString("description") ?: "No description available"
                     )
+                    Log.d("Fiqri course", document.getString("title").toString())
                     videoList.add(video)
                 }
 
                 videoAdapter.notifyDataSetChanged()
 
                 if (videoList.isEmpty()) {
-                    Toast.makeText(this, "No B3 videos found", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(requireContext(), "No Organik videos found", Toast.LENGTH_SHORT).show()
                 }
             }
             .addOnFailureListener { exception ->
-                Toast.makeText(this, "Failed to load videos: ${exception.message}", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), "Failed to load videos: ${exception.message}", Toast.LENGTH_SHORT).show()
             }
     }
 
     private fun openVideoPlayer(video: VideoModel) {
-        val intent = Intent(this, VideoPlayerActivity::class.java).apply {
+        val intent = Intent(requireContext(), VideoPlayerActivity::class.java).apply {
             putExtra("VIDEO_URL", video.videoUrl)
             putExtra("VIDEO_TITLE", video.title)
             putExtra("VIDEO_DESCRIPTION", video.description)
